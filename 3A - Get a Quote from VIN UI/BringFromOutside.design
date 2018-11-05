@@ -1,0 +1,8 @@
+<design:component label="Quote via VIN">
+    <design:attribute name="smallRate" label="Rate for Small Engine" description="Starting multiplier for engines v6 or under, default is 25"/>	
+    <design:attribute name="midRate" label="Rate for Medium Engine" description="Starting multiplier for engines v8, default is 35"/>	
+    <design:attribute name="largeRate" label="Rate for Large Engine" description="Starting multiplier for engines v10 or higher, default is 42"/>	
+    <design:attribute name="oldCarFactor" label="Factor for Old Car" description="Factor increase for cars 2010 or older, default is 2x"/>
+    <design:attribute name="classicCarFactor" label="Factor for Classic Car" description="Factor increase for cars 2011 - 2015, default is 3x"/>
+    <design:attribute name="newCarFactor" label="Factor for New Car" description="Factor increase for cars 2016 or newer, default is 5x"/>
+</design:component>
