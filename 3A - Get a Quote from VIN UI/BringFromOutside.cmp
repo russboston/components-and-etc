@@ -1,0 +1,43 @@
+<aura:component controller="SyncMe" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="showMe" type="Boolean" default="false"/>
+    <aura:attribute name="VIN" type="String"/>
+    <aura:attribute name="Output" type="Quote__c"/>
+    <aura:attribute name="smallRate" type="Integer" default="25"/>
+    <aura:attribute name="midRate" type="Integer" default="35"/>
+    <aura:attribute name="largeRate" type="Integer" default="42"/>
+    <aura:attribute name="oldCarFactor" type="Integer" default="2"/>
+    <aura:attribute name="classicCarFactor" type="Integer" default="3"/>
+    <aura:attribute name="newCarFactor" type="Integer" default="5"/>
+    
+    <lightning:card>
+        <lightning:layout horizontalAlign="center" verticalAlign="center">            
+            <div class="slds-grid slds-grid_vertical">
+                <div class="slds-col slds-border_bottom" style="padding: 1rem;">                    
+                    <lightning:input id="{!v.vinEntry}" name="inputVIN" value="{!v.VIN}" placeholder="Enter VIN to get a quote"/>
+                    <br/>
+                    <lightning:button class="slds-align_absolute-center" variant="brand" label="Get Quote!" onclick="{!c.handleFromOutside }"/>
+                </div>
+                <div class="slds-col">                    
+                    <aura:if isTrue="{!v.showMe}">
+                        <div style="padding: 1rem;">
+                            <div class="slds-align_absolute-center slds-text-heading_large" style="text-align: center; width: 8rem; background-color: rgb(255, 255, 255);">
+                                <div><b>${!v.Output.Rate__c}/mo</b></div>
+                            </div>
+                            <br/>
+                            <div class="slds-align_absolute-center" style="text-align: center; width: 8rem; background-color: rgb(255, 255, 255);">
+                                <div>{!v.Output.Make__c} - {!v.Output.Model__c} </div>
+                            </div>
+                            <div class="slds-align_absolute-center" style="text-align: center; width: 8rem; background-color: rgb(255, 255, 255);">
+                                <div>{!v.Output.Year__c}</div>
+                            </div>
+                            <div class="slds-align_absolute-center" style="text-align: center; width: 8rem; background-color: rgb(255, 255, 255);">
+                                <div>{!v.Output.Engine_Size__c} </div>
+                            </div>                            
+                        </div>
+                    </aura:if>                    
+                </div>
+            </div>            
+        </lightning:layout>
+    </lightning:card>
+</aura:component>
