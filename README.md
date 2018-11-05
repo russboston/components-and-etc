@@ -1,6 +1,6 @@
 # Scenarios with Components
 
-## This repository provides assets to how components/apex/etc were utilized to tackle various integration scenarios. Scenarios are as follows:
+#### This repository provides assets to how components/apex/etc were utilized to tackle various integration scenarios. Scenarios are as follows:
 
 (1) Calling out to external apps (i.e., for quoting app) - this will be a REST callout that hits a web service, gets a response and processes it (It will be a variation of processing for process-driven actions as well as a callout for UI rendering, to illustrate different techniques for UI-driven use cases and Process-driven use cases). Scenario 1A is Process-Driven, Scenario 1B is UI-Driven.
 
