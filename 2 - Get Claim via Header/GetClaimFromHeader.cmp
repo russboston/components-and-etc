@@ -8,14 +8,14 @@
             <div class="slds-card__header slds-grid">
                 <header class="slds-media slds-media_center slds-has-flexi-truncate">
                     <div class="slds-media__figure">
-                        <span class="slds-icon_container slds-icon-standard-account" title="account">
+                        <span class="slds-icon_container slds-icon-standard-account" title="claiminfo">
                             <lightning:icon iconName="standard:partner_fund_allocation" size="small"/>
-                            <span class="slds-assistive-text">account</span>
+                            <span class="slds-assistive-text">Claim Information</span>
                         </span>
                     </div>
                     <div class="slds-media__body">
                         <h2 class="slds-card__header-title">
-                            <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="Accounts">
+                            <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="Claim Information">
                                 <span>Claim Information</span>
                             </a>
                         </h2>
@@ -39,24 +39,24 @@
                         <div>${!v.myClaimDetail.Amount__c}</div>                        
                     </li>
                     <li class="slds-page-header__detail-item">
-                        <div class="slds-text-title slds-truncate" title="VIN">Claim ID</div>
-                        <div title="VINOutput">{!v.myClaimDetail.Claim_ID__c}</div>
+                        <div class="slds-text-title slds-truncate" title="ClaimID">Claim ID</div>
+                        <div title="ClaimID">{!v.myClaimDetail.Claim_ID__c}</div>
                     </li>
                     <li class="slds-page-header__detail-item">
-                        <div class="slds-text-title slds-truncate" title="Make">Type</div>
-                        <div title="MakeOutput">{!v.myClaimDetail.Type__c}</div>
+                        <div class="slds-text-title slds-truncate" title="Type">Type</div>
+                        <div title="TypeOutput">{!v.myClaimDetail.Type__c}</div>
                     </li>
                     <li class="slds-page-header__detail-item">
-                        <div class="slds-text-title slds-truncate" title="Model">Status</div>
-                        <div title="ModelOutput">
+                        <div class="slds-text-title slds-truncate" title="Status">Status</div>
+                        <div title="StatusOutput">
                             <div class="slds-media slds-media_small">
                                 <div class="slds-media__body">{!v.myClaimDetail.Status__c}</div>
                             </div>
                         </div>
                     </li>
                     <li class="slds-page-header__detail-item">
-                        <div class="slds-text-title slds-truncate" title="Year">Source</div>
-                        <div title="YearOutput">{!v.myClaimDetail.Source__c}</div>
+                        <div class="slds-text-title slds-truncate" title="Source">Source</div>
+                        <div title="SourceOutput">{!v.myClaimDetail.Source__c}</div>
                     </li>
                     <li class="slds-page-header__detail-item">
                         <div class="slds-text-title slds-truncate" title="ClaimEtc">Claim Center</div>
@@ -66,10 +66,12 @@
             </div>
             <footer class="slds-card__footer">
                 <a class="slds-card__footer-action" href="javascript:void(0);">View All
-                    <span class="slds-assistive-text">Accounts</span>
+                    <span class="slds-assistive-text">Claim Information</span>
                 </a>
             </footer>
         </article>
     </lightning:card>
+    
+    <!-- Useful SLDS: https://www.lightningdesignsystem.com/components/page-headers/ -->
     
 </aura:component>
